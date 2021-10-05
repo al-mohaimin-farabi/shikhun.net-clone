@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./Components/Footer/Footer";
+import Home from "./Components/Home/Home";
+import Course from "./Components/Course/Course";
+import Tranding from "./Components/Trending/Tranding";
+import AbouteUs from "./Components/AbouteUs/AbouteUs";
+import NotFound from "./Components/NotFound/NotFound";
+import Enrole from "./Components/Enrole/Enrole";
 
 function App() {
+  // route for every page
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Header></Header>
+              <Home></Home>
+              <Footer></Footer>
+            </Route>
+            <Route exact path="/home">
+              <Header></Header>
+              <Home></Home>
+              <Footer></Footer>
+            </Route>
+            <Route exact path="/course">
+              <Header></Header>
+              <Course></Course>
+              <Footer></Footer>
+            </Route>
+            <Route exact path="/tranding-courses">
+              <Header></Header>
+              <Tranding></Tranding>
+              <Footer></Footer>
+            </Route>
+            <Route exact path="/aboute-us">
+              <Header></Header>
+              <AbouteUs></AbouteUs>
+            </Route>
+            <Route path="/enrole">
+              <Enrole></Enrole>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

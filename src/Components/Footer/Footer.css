@@ -1,0 +1,29 @@
+.footer {
+  /* background: rgb(50, 49, 62); */
+  background: linear-gradient(
+    180deg,
+    rgb(39, 39, 48) 0%,
+    rgba(21, 18, 27, 1) 99%
+  );
+  padding: 15px 0px 0px;
+}
+.list-item {
+  list-style: none;
+  padding: 2px;
+  margin: 0px;
+}
+.list-item a {
+  font-size: 38px;
+  text-align: center;
+  width: 68px;
+  height: 60px;
+  color: aliceblue;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: rgb(37, 37, 37);
+  display: inline-block;
+  margin: 8px 8px 0px 0px;
+}
+.list-item a i {
+  line-height: 60px;
+}
