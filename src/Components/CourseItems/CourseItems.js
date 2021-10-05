@@ -37,7 +37,7 @@ const CourseItem = (props) => {
         <div className="card-footer d-flex justify-content-between align-items-center">
           <h5>
             মূল্য: {price}
-            <strong className="fs-3">৳</strong>
+            <strong>৳</strong>
           </h5>
           <button
             onClick={handleEnrole}
